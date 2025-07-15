@@ -19,5 +19,6 @@ public record Book(
         String author,
         @NotNull(message = "가격은 반드시 있어야 합니다")
         @Positive(message = "가격은 0보다 커야 합니다")
-        double price
+        @WonStep(value = 10)
+        long price
 ) {}

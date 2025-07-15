@@ -1,5 +1,6 @@
 package com.bookstore.catalog.domain;
 
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -20,5 +21,6 @@ public record Book(
         @NotNull(message = "가격은 반드시 있어야 합니다")
         @Positive(message = "가격은 0보다 커야 합니다")
         @WonStep(value = 10)
+        @Max(10_000_000_000L)
         long price
 ) {}

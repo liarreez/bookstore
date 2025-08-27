@@ -22,5 +22,5 @@ public record Book(
         @Positive(message = "가격은 0보다 커야 합니다")
         @WonStep(value = 10)
         @Max(10_000_000_000L)
-        long price
+        Long price
 ) {}

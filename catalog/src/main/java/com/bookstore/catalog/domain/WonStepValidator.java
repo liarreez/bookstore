@@ -14,6 +14,7 @@ public class WonStepValidator implements ConstraintValidator<WonStep, Long> {
 
     @Override
     public boolean isValid(Long value, ConstraintValidatorContext constraintValidatorContext) {
+        if (value == null) return true;
         return value % step == 0;
     }
 }
